@@ -1,0 +1,36 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to CTC Heat Pump",
+        "description": "Enter the Modbus TCP connection details for the CTC heat pump.",
+        "data": {
+          "host": "Host",
+          "port": "Port",
+          "slave_id": "Slave ID",
+          "scan_interval": "Scan interval"
+        },
+        "data_description": {
+          "host": "Hostname or IP address of the heat pump.",
+          "port": "Modbus TCP port. The default is 502.",
+          "slave_id": "Modbus slave ID. CTC defaults to 1.",
+          "scan_interval": "Polling interval in seconds."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not connect to the heat pump.",
+      "unknown": "Unexpected error."
+    },
+    "abort": {
+      "already_configured": "This heat pump is already configured."
+    }
+  },
+  "entity": {
+    "select": {
+      "smartgrid_mode": {
+        "name": "SmartGrid mode"
+      }
+    }
+  }
+}
