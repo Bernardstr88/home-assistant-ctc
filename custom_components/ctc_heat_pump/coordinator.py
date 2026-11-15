@@ -5,6 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from datetime import timedelta
 import logging
+import time
 
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import CONF_HOST, CONF_PORT
@@ -17,6 +18,7 @@ from .const import (
     DEFAULT_SCAN_INTERVAL,
     DEFAULT_SLAVE_ID,
     DOMAIN,
+    DEFAULT_SENSOR_READ_TIMEOUT,
 )
 from .modbus import (
     CtcConnectionError,
@@ -37,19 +39,15 @@ from .registers import (
 
 _LOGGER = logging.getLogger(__name__)
 
-
 @dataclass(slots=True)
 class CtcData:
     """Current CTC data."""
-
     sensors: dict[str, int | float | None]
     numbers: dict[str, float | None]
     smartgrid_raw: int | None
 
-
 class CtcDataUpdateCoordinator(DataUpdateCoordinator[CtcData]):
     """Class to manage fetching CTC data."""
-
     config_entry: ConfigEntry
 
     def __init__(self, hass: HomeAssistant, entry: ConfigEntry) -> None:
@@ -80,19 +78,35 @@ class CtcDataUpdateCoordinator(DataUpdateCoordinator[CtcData]):
         self.client.close()
 
     def _read_all(self) -> CtcData:
-        """Read all configured values."""
-        sensors = {
-            register.key: self._read_sensor(register)
-            for register in SENSOR_REGISTERS
-        }
-        numbers = {
-            register.key: self._read_number(register)
-            for register in NUMBER_REGISTERS
-        }
+        # 1. Sensor query with timeout
+        sensors = {}
+        for register in SENSOR_REGISTERS:
+            try:
+                sensors[register.key] = self._read_sensor(register)
+            except Exception as err:
+                # If a sensor fails, we logg it, but we don't block the whole system
+                _LOGGER.error("Error reading sensor %s", register.key, err)
+                continue
+            finally:
+                time.sleep(DEFAULT_SENSOR_READ_TIMEOUT) # Pause after each sensor read, default 150ms
+
+        # 2. Numbers (settings value) with timeout query
+        numbers = {}
+        for register in NUMBER_REGISTERS:
+            try:
+                numbers[register.key] = self._read_number(register)
+            except Exception as err:
+                _LOGGER.error("Error reading numbers %s: %s", register.key, err)
+                continue
+            finally:
+                time.sleep(DEFAULT_SENSOR_READ_TIMEOUT) # Pause after each sensor read, default 150ms
+        # 3. SmartGrid-Register query
         try:
             smartgrid_raw = self.client.read_registers(SMARTGRID_REGISTER, 1)[0]
         except CtcModbusError:
             smartgrid_raw = None
+        finally:
+            time.sleep(DEFAULT_SENSOR_READ_TIMEOUT)
 
         return CtcData(
             sensors=sensors,
@@ -126,7 +140,6 @@ class CtcDataUpdateCoordinator(DataUpdateCoordinator[CtcData]):
     def write_smartgrid(self, value: int) -> None:
         """Write SmartGrid mode register via FC6."""
         self.client.write_register(SMARTGRID_REGISTER, value)
-
 
 def _decode_value(data_type: RegisterType, words: list[int]) -> int | float:
     """Decode register words."""
