@@ -1,0 +1,59 @@
+﻿61641,EcoLogic / EcoZenith i550: Solar,,,,,,,,,,,,,,,,
+,deltaT min Other: Solar stop charge,1,RW,60423,60424,60425,62508,13,"0,1",sunDiffTempStop,x,x,x,x,x,x,x
+,difference,,,,,,,,,,,,,,,,
+61642,Solar charge pump min,1,RW,60426,60427,60428,62508,14,1,sunChargePumpMin,x,x,x,x,x,x,x
+61643,EcoLogic / EcoZenith i550: Solar,,,,,,,,,,,,,,,,
+,deltaT max borehole Other: Solar,1,RW,60429,60430,60431,62508,15,1,sunDiffDrillTempStart,x,x,x,x,x,x,x
+,borehole charge start diff,,,,,,,,,,,,,,,,
+61644,EcoLogic / EcoZenith i550: Solar,,,,,,,,,,,,,,,,
+,deltaT min borehole Other: Solar,1,RW,60432,60433,60434,62509,0,1,sunDiffDrillTempStop,x,x,x,x,x,x,x
+,borehole charge stop difference,,,,,,,,,,,,,,,,
+61645,EcoHeat 400 / EcoZenith i250: Solar,,,,,,,,,,,,,,,,
+,H-tank charge temp GSi/EcoZenith,1,RW,60435,60436,60437,62509,1,1,sunMainTankChargeTemp,x,x,x,x,,,
+,i350: Solar EHS-tank harge temp,,,,,,,,,,,,,,,,
+61646,Solar: X-tank charge temp,1,RW,60438,60439,60440,62509,2,1,sunExtraTankChargeTemp,x,x,x,x,,,
+61647,Solar: Eco-tank charge temp,1,RW,60441,60442,60443,62509,3,1,sunEcoTankChargeTemp,x,x,x,x,,,
+61648,EcoHeat 400 / EcoZenith i250: Solar,,,,,,,,,,,,,,,,
+,charge H-tank start difference GSi/,,,,,,,,,,,,,,,,
+,,1,RW,60444,60445,60446,62509,4,1,sunMainTankDiffTempStart,x,x,x,x,,,
+,EcoZenith i350: Solar EHS-tank,,,,,,,,,,,,,,,,
+,charge start difference,,,,,,,,,,,,,,,,
+61649,EcoHeat 400 / EcoZenith i250: Solar,,,,,,,,,,,,,,,,
+,H-tank charge stop difference GSi/,,,,,,,,,,,,,,,,
+,,1,RW,60447,60448,60449,62509,5,1,sunMainTankDiffTempStop,x,x,x,x,,,
+,EcoZenith i350: Solar EHS-tank,,,,,,,,,,,,,,,,
+,charge stop difference,,,,,,,,,,,,,,,,
+61650,EcoHeat 400 / EcoZenith i250: Solar,,,,,,,,,,,,,,,,
+,H-tank charge stop temperature,,,,,,,,,,,,,,,,
+,,1,RW,60450,60451,60452,62509,6,1,sunMainTankTempStop,x,x,x,x,,,
+,GSi/EcoZenith i350: Solar EHS-tank,,,,,,,,,,,,,,,,
+,charge stop temperature,,,,,,,,,,,,,,,,
+61651,Wood boiler buffer tank delay,,,,,,,,,,,,,,,,
+,,1,RW,60453,60454,60455,62509,7,1,woodTankReturnDelay,,,,,x,,
+,recharge time,,,,,,,,,,,,,,,,
+61652,Setpoint for upper tank when el.,,,,,,,,,,,,,,,,
+,,1,RW,60456,60457,60458,62509,8,"0,1",sElHeaterTankUpperSetp,,,,,x,,
+,heater is used,,,,,,,,,,,,,,,,
+61653,Capacity start point for charging,,,,,,,,,,,,,,,,
+,,1,RW,60459,60460,60461,62509,9,"0,1",sDHWCapacityStart,,,x,x,,,
+,DHW,,,,,,,,,,,,,,,,
+61654,Lower temp sensor start point for,,,,,,,,,,,,,,,,
+,,1,RW,60462,60463,60464,62509,10,"0,1",sDHWLowerStartTemp,,,x,x,,,
+,charging DHW,,,,,,,,,,,,,,,,
+61655,Ventilation mode,1,RW,60465,60466,60467,62509,11,1,sVentilationMode,x,x,x,x,x,x,x
+61656,Turn night cooling on or off,1,RW,60468,60469,60470,62509,12,1,sVentNightcoolValue,x,x,x,x,x,x,x
+61657,Ventilation away mode,1,RW,60471,60472,60473,62509,13,1,sVentAwayMode,x,x,x,x,x,x,x
+61658,Pool Enable,1,RW,60474,60475,60476,62509,14,1,,x,x,x,x,x,x,x
+61659,Room temp cooling,1,RW,60477,60478,60479,62509,15,"0,1",,x,x,x,x,,x,x
+61660,Cooling permitted from outdoor,,,,,,,,,,,,,,,,
+,,1,RW,60480,60481,60482,62510,0,"0,1",,,,,x,,x,x
+,temp °C,,,,,,,,,,,,,,,,
+61661,Cooling delay active (minutes),1,RW,60483,60484,60485,62510,1,1,,x,x,x,x,x,x,x
+61662,Delay cooling from heating off,,,,,,,,,,,,,,,,
+,,1,RW,60486,60487,60488,62510,2,1,,,,,x,,x,x
+,(minutes),,,,,,,,,,,,,,,,
+61663,Cooling start delay (minutes),1,RW,60489,60490,60491,62510,3,1,,x,x,x,x,x,x,x
+61664,Cooling diff calc delay (minutes),1,RW,60492,60493,60494,62510,4,1,,,,,x,,x,x
+61665,Primary flow temp at outdoor +20,,,,,,,,,,,,,,,,
+,,1,RW,60495,60496,60497,62510,5,"0,1",,,,,x,,x,x
+,°C,,,,,,,,,,,,,,,,

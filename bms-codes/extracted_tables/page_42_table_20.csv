@@ -1,0 +1,16 @@
+﻿62306,RadiatorPump3_G3,0,R,62550,6,1,,,,,x,x,x
+62307,RadiatorPump4_G4,0,R,62550,7,1,,,,,,x,x
+62308,Heating system 1: Shunt state,,,,,,,,,,,,
+,,0,R,62550,8,1,x,x,,,x,x,x
+,"0 = Close, 1 = Inactive, 2 = Open",,,,,,,,,,,,
+62309,Heating system 2: Shunt state,,,,,,,,,,,,
+,,0,R,62550,9,1,x,x,x,x,x,x,x
+,"0 = Close, 1 = Inactive, 2 = Open",,,,,,,,,,,,
+62310,Heating system 3: Shunt state,,,,,,,,,,,,
+,,0,R,62550,10,1,,,,,x,x,x
+,"0 = Close, 1 = Inactive, 2 = Open",,,,,,,,,,,,
+62311,Heating system 4: Shunt state,,,,,,,,,,,,
+,,0,R,62550,11,1,,,,,,x,x
+,"0 = Close, 1 = Inactive, 2 = Open",,,,,,,,,,,,
+62312,PumpG41 Extern DHW,,,,,,,,,,,,
+,,0,R,,12,1,,,,,x,x,x

@@ -1,0 +1,59 @@
+﻿62345,Compressor 3 Power consumption,,,,,,,,,,,,
+,,0,R,62552,13,1,,,,,x,x,x
+,kWh LSB,,,,,,,,,,,,
+62346,Compressor 3 Power consumption,,,,,,,,,,,,
+,,0,R,62552,14,1,,,,,x,x,x
+,kWh (<< 16) MSB,,,,,,,,,,,,
+62347,Compressor 4 Power consumption,,,,,,,,,,,,
+,,0,R,62552,15,1,,,,,,x,x
+,kWh LSB,,,,,,,,,,,,
+62348,Compressor 4 Power consumption,,,,,,,,,,,,
+,,0,R,62553,0,1,,,,,,x,x
+,kWh (<< 16) MSB,,,,,,,,,,,,
+62349,Compressor 5 Power consumption,,,,,,,,,,,,
+,,0,R,62553,1,1,,,,,,x,x
+,kWh LSB,,,,,,,,,,,,
+62350,Compressor 5 Power consumption,,,,,,,,,,,,
+,,0,R,62553,2,1,,,,,,x,x
+,kWh (<< 16) MSB,,,,,,,,,,,,
+62351,Compressor 6 Power consumption,,,,,,,,,,,,
+,,0,R,62553,3,1,,,,,,x,x
+,kWh LSB,,,,,,,,,,,,
+62352,Compressor 6 Power consumption,,,,,,,,,,,,
+,,0,R,62553,4,1,,,,,,x,x
+,kWh (<< 16) MSB,,,,,,,,,,,,
+62353,Compressor 7 Power consumption,,,,,,,,,,,,
+,,0,R,62553,5,1,,,,,,x,x
+,kWh LSB,,,,,,,,,,,,
+62354,Compressor 7 Power consumption,,,,,,,,,,,,
+,,0,R,62553,6,1,,,,,,x,x
+,kWh (<< 16) MSB,,,,,,,,,,,,
+62355,Compressor 8 Power consumption,,,,,,,,,,,,
+,,0,R,62553,7,1,,,,,,x,x
+,kWh LSB,,,,,,,,,,,,
+62356,Compressor 8 Power consumption,,,,,,,,,,,,
+,,0,R,62553,8,1,,,,,,x,x
+,kWh (<< 16) MSB,,,,,,,,,,,,
+62357,Compressor 9 Power consumption,,,,,,,,,,,,
+,,0,R,62553,9,1,,,,,,x,x
+,kWh LSB,,,,,,,,,,,,
+62358,Compressor 9 Power consumption,,,,,,,,,,,,
+,,0,R,62553,10,1,,,,,,x,x
+,kWh (<< 16) MSB,,,,,,,,,,,,
+62359,Compressor 10 Power consumption,,,,,,,,,,,,
+,,0,R,62553,11,1,,,,,,x,x
+,kWh LSB,,,,,,,,,,,,
+62360,Compressor 10 Power consumption,,,,,,,,,,,,
+,,0,R,62553,12,1,,,,,,x,x
+,kWh (<< 16) MSB,,,,,,,,,,,,
+62361,Power kW immersion heater(s),0,R,62553,13,0.1,x,x,x,x,x,x,x
+62362,HBT top temp,0,R,62553,14,1,,,,,,x,x
+62363,DHW tank top temp,0,R,62553,15,1,,,,,,x,x
+62364,Cooling tank top temp,0,R,62554,0,1,,,,,x,x,x
+62365,Periodic extra DHW status,,,,,,,,,,,,
+,0 = periodic extra DHW not defined,,,,,,,,,,,,
+,1 = periodic extra DHW active,,,,,,,,,,,,
+,,0,R,62554,1,1,,,,,x,x,x
+,"2 = periodic extra DHW off, normal",,,,,,,,,,,,
+,"3 = periodic extra DHW off, last",,,,,,,,,,,,
+,DHW increase failed,,,,,,,,,,,,

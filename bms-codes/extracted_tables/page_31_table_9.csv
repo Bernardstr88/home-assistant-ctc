@@ -1,0 +1,81 @@
+﻿61716,Cooling curve point 1 y-value (setp,,,,,,,,,,,,,,,
+,,1,RW,60648,60649,60650,62513,8,1,,,,x,x,x,x
+,temp),,,,,,,,,,,,,,,
+61717,Cooling curve point 2 x-value,,,,,,,,,,,,,,,
+,,1,RW,60651,60652,60653,62513,9,1,,,,x,x,x,x
+,(outside temp),,,,,,,,,,,,,,,
+61718,Cooling curve point 2 y-value (setp,,,,,,,,,,,,,,,
+,,1,RW,60654,60655,60656,62513,10,1,,,,x,x,x,x
+,temp),,,,,,,,,,,,,,,
+61719,Cooling curve point 3 x-value,,,,,,,,,,,,,,,
+,,1,RW,60657,60658,60659,62513,11,1,,,,x,x,x,x
+,(outside temp),,,,,,,,,,,,,,,
+61720,Cooling curve point 3 y-value (setp,,,,,,,,,,,,,,,
+,,1,RW,60660,60661,60662,62513,12,1,,,,x,x,x,x
+,temp),,,,,,,,,,,,,,,
+61721,Cooling curve point 4 x-value,,,,,,,,,,,,,,,
+,,1,RW,60663,60664,60665,62513,13,1,,,,x,x,x,x
+,(outside temp),,,,,,,,,,,,,,,
+61722,Cooling curve point 4 y-value (setp,,,,,,,,,,,,,,,
+,,1,RW,60666,60667,60668,62513,14,1,,,,x,x,x,x
+,temp),,,,,,,,,,,,,,,
+61723,Cooling curve point 5 x-value,,,,,,,,,,,,,,,
+,,1,RW,60669,60670,60671,62513,15,1,,,,x,x,x,x
+,(outside temp),,,,,,,,,,,,,,,
+61724,Cooling curve point 5 y-value (setp,,,,,,,,,,,,,,,
+,,1,RW,60672,60673,60674,62514,0,1,,,,x,x,x,x
+,temp),,,,,,,,,,,,,,,
+61725,Heating system 1: Heating on time,1,RW,60675,60676,60677,62514,1,1,x,x,x,x,x,x,x
+61726,Heating system 2: Heating on time,1,RW,60678,60679,60680,62514,2,1,x,x,x,x,x,x,x
+61727,Heating system 3: Heating on time,1,RW,60681,60682,60683,62514,3,1,x,x,x,x,x,x,x
+61728,Heating system 4: Heating on time,1,RW,60684,60685,60686,62514,4,1,x,x,x,x,x,x,x
+62000,Outdoor temperature,1,R,,,,62531,4,"0,1
+sOutsideTemp",x,x,x,x,x,x,x
+62001,Stop temperature DHW,1,R,,,,62531,5,"0,1
+sStopTempDHW",x,x,x,x,x,x,x
+62002,Setpoint outlet temperature DHW,1,R,,,,62531,6,"1
+sSetPDHW",,,x,x,,,
+62003,Hot water temperature,1,R,,,,62531,7,"0,1
+sDHWTemp",,,x,x,,,
+62004,Delay mixing valve,1,R,,,,62531,8,"1
+sMixValveDelay",x,x,,,x,,
+62005,Status,,,,,,,,,,,,,,,
+,"0: HP upper, 1: HP lower, 2: Add",,,,,,,,,,,,,,,
+,"3: HP + Add, 4: HC, 5: DHW",,,,,,,,,,,,,,,
+,,1,R,,,,62531,9,"1
+sStatus",x,x,x,x,x,x,x
+,"6: Pool, 7: Off, 8: Heating mix",,,,,,,,,,,,,,,
+,"9: Wood, 10: DHW/HC, 11: Cooling,",,,,,,,,,,,,,,,
+,12: Swap,,,,,,,,,,,,,,,
+62006,Radiator Water,1,R,,,,62531,10,"0,1
+sRadiatorTemp",x,x,,,x,x,x
+62007,Heating system 1: Temperature,,,,,,,,,,,,,,,
+,,1,R,,,,62531,11,"0,1
+hs1Temp",x,x,x,x,x,x,"x
+x"
+,setpoint primary flow,,,,,,,,,,,,,,,
+62008,Heating system 2: Temperature,,,,,,,,,,,,,,,
+,,1,R,,,,62531,12,"0,1
+hs2Temp",x,x,x,x,x,x,x
+,setpoint primary flow,,,,,,,,,,,,,,,
+62009,Heating system 3: Temperature,,,,,,,,,,,,,,,
+,,1,R,,,,62531,13,"0,1
+hs3Temp",,,,,x,x,x
+,setpoint primary flow,,,,,,,,,,,,,,,
+62010,Heating system 4: Temperature,,,,,,,,,,,,,,,
+,,1,R,,,,62531,14,"0,1
+hs4Temp",,,,,,x,x
+,setpoint primary flow,,,,,,,,,,,,,,,
+62011,Heating system 1: Primary flow,,,,,,,,,,,,,,,
+,,1,R,,,,62531,15,"0,1
+hs1PrimaryFlow",x,x,x,x,x,x,"x
+x"
+,temperature,,,,,,,,,,,,,,,
+62012,Heating system 2: Primary flow,,,,,,,,,,,,,,,
+,,1,R,,,,62532,0,"0,1
+hs2PrimaryFlow",x,x,x,x,x,x,x
+,temperature,,,,,,,,,,,,,,,
+62013,Heating system 3: Primary flow,,,,,,,,,,,,,,,
+,,1,R,,,,62532,1,"0,1
+hs3PrimaryFlow",,,,,x,x,x
+,temperature,,,,,,,,,,,,,,,

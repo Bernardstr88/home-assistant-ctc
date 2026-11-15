@@ -1,0 +1,75 @@
+﻿61691,HC2 Heating curve point 4 x-value,,,,,,,,,,,,,,,
+,,1,RW,60573,60574,60575,62511,15,1,x,x,x,x,x,x,x
+,(outside temp),,,,,,,,,,,,,,,
+61692,HC2 Heating curve point 4 y-value,,,,,,,,,,,,,,,
+,,1,RW,60576,60577,60578,62512,0,1,x,x,x,x,x,x,x
+,(setp temp),,,,,,,,,,,,,,,
+61693,HC2 Heating curve point 5 x-value,,,,,,,,,,,,,,,
+,,1,RW,60579,60580,60581,62512,1,1,x,x,x,x,x,x,x
+,(outside temp),,,,,,,,,,,,,,,
+61694,HC2 Heating curve point 5 y-value,,,,,,,,,,,,,,,
+,,1,RW,60582,60583,60584,62512,2,1,x,x,x,x,x,x,x
+,(setp temp),,,,,,,,,,,,,,,
+61695,HC3 Heating curve point 1 x-value,,,,,,,,,,,,,,,
+,,1,RW,60585,60586,60587,62512,3,1,,,,,x,x,x
+,(outside temp),,,,,,,,,,,,,,,
+61696,HC3 Heating curve point 1 y-value,,,,,,,,,,,,,,,
+,,1,RW,60588,60589,60590,62512,4,1,,,,,x,x,x
+,(setp temp),,,,,,,,,,,,,,,
+61697,HC3 Heating curve point 2 x-value,,,,,,,,,,,,,,,
+,,1,RW,60591,60592,60593,62512,5,1,,,,,x,x,x
+,(outside temp),,,,,,,,,,,,,,,
+61698,HC3 Heating curve point 2 y-value,,,,,,,,,,,,,,,
+,,1,RW,60594,60595,60596,62512,6,1,,,,,x,x,x
+,(setp temp),,,,,,,,,,,,,,,
+61699,HC3 Heating curve point 3 x-value,,,,,,,,,,,,,,,
+,,1,RW,60597,60598,60599,62512,7,1,,,,,x,x,x
+,(outside temp),,,,,,,,,,,,,,,
+61700,HC3 Heating curve point 3 y-value,,,,,,,,,,,,,,,
+,,1,RW,60600,60601,60602,62512,8,1,,,,,x,x,x
+,(setp temp),,,,,,,,,,,,,,,
+61701,HC3 Heating curve point 4 x-value,,,,,,,,,,,,,,,
+,,1,RW,60603,60604,60605,62512,9,1,,,,,x,x,x
+,(outside temp),,,,,,,,,,,,,,,
+61702,HC3 Heating curve point 4 y-value,,,,,,,,,,,,,,,
+,,1,RW,60606,60607,60608,62512,10,1,,,,,x,x,x
+,(setp temp),,,,,,,,,,,,,,,
+61703,HC3 Heating curve point 5 x-value,,,,,,,,,,,,,,,
+,,1,RW,60609,60610,60611,62512,11,1,,,,,x,x,x
+,(outside temp),,,,,,,,,,,,,,,
+61704,HC3 Heating curve point 5 y-value,,,,,,,,,,,,,,,
+,,1,RW,60612,60613,60614,62512,12,1,,,,,x,x,x
+,(setp temp),,,,,,,,,,,,,,,
+61705,HC4 Heating curve point 1 x-value,,,,,,,,,,,,,,,
+,,1,RW,60615,60616,60617,62512,13,1,,,,,,x,x
+,(outside temp),,,,,,,,,,,,,,,
+61706,HC4 Heating curve point 1 y-value,,,,,,,,,,,,,,,
+,,1,RW,60618,60619,60620,62512,14,1,,,,,,x,x
+,(setp temp),,,,,,,,,,,,,,,
+61707,HC4 Heating curve point 2 x-value,,,,,,,,,,,,,,,
+,,1,RW,60621,60622,60623,62512,15,1,,,,,,x,x
+,(outside temp),,,,,,,,,,,,,,,
+61708,HC4 Heating curve point 2 y-value,,,,,,,,,,,,,,,
+,,1,RW,60624,60625,60626,62513,0,1,,,,,,x,x
+,(setp temp),,,,,,,,,,,,,,,
+61709,HC4 Heating curve point 3 x-value,,,,,,,,,,,,,,,
+,,1,RW,60627,60628,60629,62513,1,1,,,,,,x,x
+,(outside temp),,,,,,,,,,,,,,,
+61710,HC4 Heating curve point 3 y-value,,,,,,,,,,,,,,,
+,,1,RW,60630,60631,60632,62513,2,1,,,,,,x,x
+,(setp temp),,,,,,,,,,,,,,,
+61711,HC4 Heating curve point 4 x-value,,,,,,,,,,,,,,,
+,,1,RW,60633,60634,60635,62513,3,1,,,,,,x,x
+,(outside temp),,,,,,,,,,,,,,,
+61712,HC4 Heating curve point 4 y-value,,,,,,,,,,,,,,,
+,,1,RW,60636,60637,60638,62513,4,1,,,,,,x,x
+,(setp temp),,,,,,,,,,,,,,,
+61713,HC4 Heating curve point 5 x-value,,,,,,,,,,,,,,,
+,,1,RW,60639,60640,60641,62513,5,1,,,,,,x,x
+,(outside temp),,,,,,,,,,,,,,,
+61714,HC4 Heating curve point 5 y-value,,,,,,,,,,,,,,,
+,,1,RW,60642,60643,60644,62513,6,1,,,,,,x,x
+,(setp temp),,,,,,,,,,,,,,,
+61715,Cooling curve point 1 x-value,,,,,,,,,,,,,,,
+,,1,RW,60645,60646,60647,62513,7,1,,,,x,x,x,x
+,(outside temp),,,,,,,,,,,,,,,

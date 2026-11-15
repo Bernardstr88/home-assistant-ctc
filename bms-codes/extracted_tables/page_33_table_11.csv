@@ -1,0 +1,64 @@
+﻿"Function
+BMS Register
+62020
+Heat pump 4 (A4) Status",Signed,Read/Write,Max,Min,Step,Visible,Bit,Factor,"Name
+EcoHeat 400
+EcoZenith i250","Gsi/GS
+EcoVent i350F
+EcoZenith i550
+EcoZenith i350/ 
+Eco Part6xx  M Pro",EcoLogic M L
+"0=Compressor_off_start_delay,",,,,,,,,,,,
+1=Compressor_off_redy_to_start,,,,,,,,,,,
+"2=Compressor_wait_until_flow,",,,,,,,,,,,
+3=Comperssor_on_heating,,,,,,,,,,,
+"4=Defrost_active, 5=Compressor_",,,,,,,,,,,
+on_cooling,1,R,,,,62532,8,1,hp4Status,x,x
+"6=Compressor_off_blocked,",,,,,,,,,,,
+7=Compressor_off_alarm,,,,,,,,,,,
+"8=Function_test., 30=HP not defined",,,,,,,,,,,
+"31=Compressor not enabled,",,,,,,,,,,,
+32=Communication error,,,,,,,,,,,
+33=Charge dhw,,,,,,,,,,,
+"62021
+Heat pump 5 (A5) Status",,,,,,,,,,,
+"0=Compressor_off_start_delay,",,,,,,,,,,,
+1=Compressor_off_redy_to_start,,,,,,,,,,,
+"2=Compressor_wait_until_flow,",,,,,,,,,,,
+3=Comperssor_on_heating,,,,,,,,,,,
+"4=Defrost_active, 5=Compressor_",,,,,,,,,,,
+on_cooling,1,R,,,,62532,9,1,hp5Status,x,x
+"6=Compressor_off_blocked,",,,,,,,,,,,
+7=Compressor_off_alarm,,,,,,,,,,,
+"8=Function_test., 30=HP not defined",,,,,,,,,,,
+"31=Compressor not enabled,",,,,,,,,,,,
+32=Communication error,,,,,,,,,,,
+33=Charge dhw,,,,,,,,,,,
+"62022
+Heat pump 6 (A6) Status",,,,,,,,,,,
+"0=Compressor_off_start_delay,",,,,,,,,,,,
+1=Compressor_off_redy_to_start,,,,,,,,,,,
+"2=Compressor_wait_until_flow,",,,,,,,,,,,
+3=Comperssor_on_heating,,,,,,,,,,,
+"4=Defrost_active,  5=Compressor_",,,,,,,,,,,
+on_cooling,1,R,,,,62532,10,1,hp6Status,x,x
+"6=Compressor_off_blocked,",,,,,,,,,,,
+7=Compressor_off_alarm,,,,,,,,,,,
+"8=Function_test., 30=HP not defined",,,,,,,,,,,
+"31=Compressor not enabled,",,,,,,,,,,,
+32=Communication error,,,,,,,,,,,
+33=Charge dhw,,,,,,,,,,,
+"62023
+Heat pump 7 (A7) Status",,,,,,,,,,,
+"0=Compressor_off_start_delay,",,,,,,,,,,,
+1=Compressor_off_redy_to_start,,,,,,,,,,,
+"2=Compressor_wait_until_flow,",,,,,,,,,,,
+3=Comperssor_on_heating,,,,,,,,,,,
+"4=Defrost_active, 5=Compressor_",,,,,,,,,,,
+on_cooling,1,R,,,,62532,11,1,hp7Status,x,x
+"6=Compressor_off_blocked,",,,,,,,,,,,
+7=Compressor_off_alarm,,,,,,,,,,,
+"8=Function_test., 30=HP not defined",,,,,,,,,,,
+"31=Compressor not enabled,",,,,,,,,,,,
+32=Communication error,,,,,,,,,,,
+33=Charge dhw,,,,,,,,,,,

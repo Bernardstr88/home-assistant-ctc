@@ -1,0 +1,59 @@
+﻿62313,HotWaterValve,,,,,,,,,,,,
+,,0,R,62550,13,1,x,x,x,x,x,x,x
+62314,ExtBoilerOn,,,,,,,,,,,,
+,,0,R,62550,14,1,,,,x,,,
+62315,EL1 Relay,,,,,,,,,,,,
+,,0,R,62550,15,1,x,x,x,x,x,x,x
+,"Bit 0: A, Bit 1: B",,,,,,,,,,,,
+62316,EL2 Relay,,,,,,,,,,,,
+,,0,R,62551,0,1,x,x,x,x,x,x,x
+,"Bit 0: A, Bit 1: B",,,,,,,,,,,,
+62317,EL3 Relay,,,,,,,,,,,,
+,,0,R,62551,1,1,x,x,x,x,x,,
+,"Bit 0: A, Bit 1: B",,,,,,,,,,,,
+62318,ElHeater3_6kW,0,R,,2,1,,x,,,x,,
+,,,,62551,,,,,,,,,
+62319,EVK: Shunt state,,,,,,,,,,,,
+,,0,R,62551,3,1,,,x,x,,,
+,"0 = Close, 1 = Inactive, 2 = Open",,,,,,,,,,,,
+62320,ExtBoiler: Shunt state,,,,,,,,,,,,
+,,0,R,62551,4,1,,,,x,,,
+,"0 = Close, 1 = Inactive, 2 = Open",,,,,,,,,,,,
+62321,Active Cooling: Valve,0,R,62551,5,1,,,,x,x,x,x
+62322,Active Cooling: Demand,,,,,,,,,,,,
+,,0,R,62551,6,1,,,,x,x,x,x
+62323,DHWPump: 0-100,,,,,,,,,,,,
+,,0,R,62551,7,1,,,x,x,,,
+62324,SolarTankSelection,0,R,62551,8,1,x,x,x,x,,,
+62325,SolarBedrockSelection,0,R,62551,9,1,x,x,x,x,,,
+62326,HotWaterValve2,0,R,62551,10,1,,,,,,x,x
+62327,E4,0,R,62551,11,1,,,,,,x,x
+62328,E1,0,R,62551,12,1,,,,,,x,x
+62329,Stat: Immersion heater kWh MSB,,,,,,,,,,,,
+,(when lower counter reaches 65535,0,R,62551,13,1,x,x,x,x,x,,
+,this increases),,,,,,,,,,,,
+62330,Current room temp cooling,1,R,62551,14,"0,1",x,x,x,x,x,x,x
+62331,HP1 Power consumption kW,0,R,,,,x,x,x,x,x,x,x
+,,,,62551,15,"0,1",,,,,,,
+62332,HP2 Power consumption kW,,,,,,,,,,,,
+,,0,R,62552,0,"0,1",,,,,x,x,x
+62333,HP3 Power consumption kW,0,R,62552,1,"0,1",,,,,x,x,x
+62334,HP4 Power consumption kW,0,R,62552,2,"0,1",,,,,,x,x
+62335,HP5 Power consumption kW,0,R,62552,3,"0,1",,,,,,x,x
+62336,HP6 Power consumption kW,0,R,62552,4,"0,1",,,,,,x,x
+62337,HP7 Power consumption kW,0,R,62552,5,"0,1",,,,,,x,x
+62338,HP8 Power consumption kW,0,R,62552,6,"0,1",,,,,,x,x
+62339,HP9 Power consumption kW,0,R,62552,7,"0,1",,,,,,x,x
+62340,HP10 Power consumption kW,0,R,62552,8,"0,1",,,,,,x,x
+62341,Compressor 1 Power consumption,,,,,,,,,,,,
+,,0,R,62552,9,1,x,x,x,x,x,x,x
+,kWh LSB,,,,,,,,,,,,
+62342,Compressor 1 Power consumption,,,,,,,,,,,,
+,,0,R,62552,10,1,x,x,x,x,x,x,x
+,kWh (<< 16) MSB,,,,,,,,,,,,
+62343,Compressor 2 Power consumption,,,,,,,,,,,,
+,,0,R,62552,11,1,,,,,x,x,x
+,kWh LSB,,,,,,,,,,,,
+62344,Compressor 2 Power consumption,,,,,,,,,,,,
+,,0,R,62552,12,1,,,,,x,x,x
+,kWh (<< 16) MSB,,,,,,,,,,,,

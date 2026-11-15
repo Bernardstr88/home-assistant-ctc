@@ -1,0 +1,57 @@
+﻿61563,Heating system 2: Outdoor temp,,,,,,,,,,,,,,,,
+,,1,RW,60189,60190,60191,62503,15,"0,1",hs2NightReduceOffTemp,x,x,x,x,x,x,x
+,night reduction,,,,,,,,,,,,,,,,
+61564,Heating system 3: Outdoor temp,,,,,,,,,,,,,,,,
+,,1,RW,60192,60193,60194,62504,0,"0,1",hs3NightReduceOffTemp,,,,,x,x,x
+,night reduction,,,,,,,,,,,,,,,,
+61565,Heating system 4: Outdoor temp,,,,,,,,,,,,,,,,
+,,1,RW,60195,60196,60197,62504,1,"0,1",hs4NightReduceOffTemp,,,,,,x,x
+,night reduction,,,,,,,,,,,,,,,,
+61566,Heating system 1: Alarm low room,,,,,,,,,,,,,,,,
+,,1,RW,60198,60199,60200,62504,2,"0,1",hs1AlarmLowRoomTemp,x,x,x,x,x,x,x
+,temperature,,,,,,,,,,,,,,,,
+61567,Heating system 2: Alarm low room,,,,,,,,,,,,,,,,
+,,1,RW,60201,60202,60203,62504,3,"0,1",hs2AlarmLowRoomTemp,x,x,x,x,x,x,x
+,temperature,,,,,,,,,,,,,,,,
+61568,Heating system 3: Alarm low room,,,,,,,,,,,,,,,,
+,,1,RW,60204,60205,60206,62504,4,"0,1",hs3AlarmLowRoomTemp,,,,,x,x,x
+,temperature,,,,,,,,,,,,,,,,
+61569,Heating system 4: Alarm low room,,,,,,,,,,,,,,,,
+,,1,RW,60207,60208,60209,62504,5,"0,1",hs4AlarmLowRoomTemp,,,,,,x,x
+,temperature,,,,,,,,,,,,,,,,
+61570,Radiator pump setting %,1,RW,60210,60211,60212,62504,6,1,hsChargePumpSetting,,,x,x,x,x,x
+61571,Start at degree minute,1,RW,60213,60214,60215,62504,7,1,hpDMStart,,,x,x,x,x,x
+61572,Heat pump 1 (A1): Max RPS,1,RW,60216,60217,60218,62504,8,"0,1",hp1RPSMax,,,x,x,x,x,"x
+x"
+61573,Heat pump 2 (A2): Max RPS,1,RW,60219,60220,60221,62504,9,"0,1",hp2RPSMax,,,,,x,x,x
+61574,Heat pump 3 (A3): Max RPS,1,RW,60222,60223,60224,62504,10,"0,1",hp3RPSMax,,,,,x,x,x
+61575,Heat pump 4 (A4): Max RPS,1,RW,60225,60226,60227,62504,11,"0,1",hp4RPSMax,,,,,,x,x
+61576,Heat pump 5 (A5): Max RPS,1,RW,60228,60229,60230,62504,12,"0,1",hp5RPSMax,,,,,,x,x
+61577,Heat pump 6 (A6): Max RPS,1,RW,60231,60232,60233,62504,13,"0,1",hp6RPSMax,,,,,,x,x
+61578,Heat pump 7 (A7): Max RPS,1,RW,60234,60235,60236,62504,14,"0,1",hp7RPSMax,,,,,,x,x
+61579,Heat pump 8 (A8): Max RPS,1,RW,60237,60238,60239,62504,15,"0,1",hp8RPSMax,,,,,,x,x
+61580,Heat pump 9 (A9): Max RPS,1,RW,60240,60241,60242,62505,0,"0,1",hp9RPSMax,,,,,,x,x
+61581,Heat pump 10 (A10): Max RPS,1,RW,60243,60244,60245,62505,1,"0,1",hp10RPSMax,,,,,,x,x
+61582,"E1: Start add heat, degree minute",1,RW,60246,60247,60248,62505,2,1,exb1DMStart,,,,x,x,x,x
+61583,External boiler diff,1,RW,60249,60250,60251,62505,3,"0,1",exb1Diff???,,,,x,x,,
+61584,Blocking additional heat outdoor,,,,,,,,,,,,,,,,
+,,1,RW,60252,60253,60254,62505,4,"0,1",exbBlockOutTemp,,,,x,,x,x
+,temp ºC,,,,,,,,,,,,,,,,
+61585,"Boiler, open mixing valve ºC",1,RW,60255,60256,60257,62505,5,"0,1",exbBoilerShuntTemp,,,,x,x,x,x
+61586,Delay stop external boiler,1,RW,60258,60259,60260,62505,6,1,exbBoilerDelayStop,,,,x,x,,
+61587,Ext boiler mode,,,,,,,,,,,,,,,,
+,,1,RW,60261,60262,60263,62505,7,1,exbMode,,,,x,,,
+,"0=Auto, 1=On, 2=Off",,,,,,,,,,,,,,,,
+61588,EHS: open shunt degrees,1,RW,60264,60265,60266,62505,8,"0,1",ehsStartDegrees,,,x,x,,,
+61589,EHS: start / stop diff,1,RW,60267,60268,60269,62505,9,1,ehsDiffStartStop,,,x,x,,,
+61590,Max immersion heater kW / Lower,1,RW,60270,60271,60272,62505,10,"0,1",elhMaxPower,,x,x,x,x,x,x
+61591,Max immersion heater DHW kW /,,,,,,,,,,,,,,,,
+,,1,RW,60273,60274,60275,62505,11,"0,1",elhDHWMaxPower,x,x,x,x,x,x,x
+,Upper,,,,,,,,,,,,,,,,
+61602,Heating system 1: Holiday reduction,1,RW,60306,60307,60308,62506,6,"0,1",hs1ReduceTempVac,x,x,x,x,x,x,x
+61603,Heating system 2: Holiday reduction,1,RW,60309,60310,60311,62506,7,"0,1",hs2ReduceTempVac,x,x,x,x,x,x,x
+61604,Heating system 3: Holiday reduction,1,RW,60312,60313,60314,62506,8,"0,1",hs3ReduceTempVac,,,,,x,x,x
+61605,Heating system 4: Holiday reduction,1,RW,60315,60316,60317,62506,9,"0,1",hs4ReduceTempVac,,,,,,x,x
+61606,Heating system 1: Primary flow,,,,,,,,,,,,,,,,
+,,1,RW,60318,60319,60320,62506,10,"0,1",hs1PrimaryFlowReduceVac,x,x,x,x,x,x,x
+,Holiday reduction,,,,,,,,,,,,,,,,

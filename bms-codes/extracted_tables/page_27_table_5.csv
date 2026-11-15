@@ -1,0 +1,56 @@
+﻿61607,Heating system 2: Primary flow,,,,,,,,,,,,,,,,
+,,1,RW,60321,60322,60323,62506,11,"0,1",hs2PrimaryFlowReduceVac,x,x,x,x,x,x,x
+,Holiday reduction,,,,,,,,,,,,,,,,
+61608,Heating system 3: Primary flow,,,,,,,,,,,,,,,,
+,,1,RW,60324,60325,60326,62506,12,"0,1",hs3PrimaryFlowReduceVac,,,,,x,x,x
+,Holiday reduction,,,,,,,,,,,,,,,,
+61609,Heating system 4: Primary flow,,,,,,,,,,,,,,,,
+,,1,RW,60327,60328,60329,62506,13,"0,1",hs4PrimaryFlowReduceVac,,,,,,x,x
+,Holiday reduction,,,,,,,,,,,,,,,,
+61610,"Heat pump : Diff Heat pump ,",,,,,,,,,,,,,,,,
+,,1,RW,60330,60331,60332,62506,14,1,hpXDMDiff,,,,,,x,x
+,degree minute,,,,,,,,,,,,,,,,
+61611,Heat pump : Delay between Heat,,,,,,,,,,,,,,,,
+,,1,RW,60333,60334,60335,62506,15,1,hpXDMDelay,,,,,x,x,x
+,pump,,,,,,,,,,,,,,,,
+61612,"E1: Diff add heat, degree minute",1,RW,60336,60337,60338,62507,0,1,ex1DMDiff,,,,,,x,x
+61613,E2: Start 0-10V degree minute,1,RW,60339,60340,60341,62507,1,1,ex2DMStart,,,,,,x,x
+61614,"E2: Diff 0-10V, degree minute",1,RW,60342,60343,60344,62507,2,1,ex2DMDiff,,,,,,x,x
+61615,"E3: Start EcoMiniEl, degree minute",1,RW,60345,60346,60347,62507,3,1,ex3DMStart,,,,,,x,x
+61616,E3: Number of steps heating,1,RW,60348,60349,60350,62507,4,1,ex3StepsHeat,,,,,,x,x
+61617,E3: Number of steps DHW,1,RW,60351,60352,60353,62507,5,1,ex3StepsDHW,,,,,,x,x
+61618,E3: Diff step EcoMiniEl,1,RW,60354,60355,60356,62507,6,1,ex3EMEDiffSteps,,,,,,x,x
+61619,E1: Delay add heat E1,1,RW,60357,60358,60359,62507,7,1,ex1Delay,,,,,,x,x
+61620,E2: Delay add heat 0-10V,1,RW,60360,60361,60362,62507,8,1,ex2Delay,,,,,,x,x
+61621,E2: Diff 0-10V delay,1,RW,60363,60364,60365,62507,9,1,ex2DiffDelay,,,,,,x,x
+61622,E3: Delay EcoMiniEl,1,RW,60366,60367,60368,62507,10,1,ex3EMEDelay,,,,,,x,x
+61623,E3: Delay EcoMiniEl step,1,RW,60369,60370,60371,62507,11,1,ex3EMEDelaySteps,,,,,,x,x
+61624,Cooling: Primary flow at the outdoor,,,,,,,,,,,,,,,,
+,,1,RW,60372,60373,60374,62507,12,1,coolPrimaryOut20,,,,,,x,x
+,temperature +20 ºC,,,,,,,,,,,,,,,,
+61625,Cooling: Primary flow at the outdoor,,,,,,,,,,,,,,,,
+,,1,RW,60375,60376,60377,62507,13,1,coolPrimaryOut40,,,,,,x,x
+,temperature +40 ºC,,,,,,,,,,,,,,,,
+61626,Cooling: Min flow temperature,1,RW,60378,60379,60380,62507,14,1,coolPrimaryMin,,,,,,x,x
+61627,,1,RW,60381,60382,60383,62507,15,1,,,,,,,,
+61628,,1,RW,60384,60385,60386,62508,0,1,,,,,,,,
+61629,Delay mixing valve setting,,,,,,,,,,,,,,,,
+,,1,RW,60387,60388,60389,62508,1,1,sMixValveDelaySet,x,x,,,x,,
+,241=Off,,,,,,,,,,,,,,,,
+61630,Wood boiler start flue gas,,,,,,,,,,,,,,,,
+,,1,RW,60390,60391,60392,62508,2,"0,1",woodFlueGasTempStart,,,,,x,x,x
+,490=Off,,,,,,,,,,,,,,,,
+61631,Wood boiler start boiler,,,,,,,,,,,,,,,,
+,,1,RW,60393,60394,60395,62508,3,"0,1",woodBoilerTempStart,,,,,x,,
+,temperature,,,,,,,,,,,,,,,,
+61632,Wood boiler hysteresis,1,RW,60396,60397,60398,62508,4,"0,1",woodHysteresis,,,,,x,,
+61633,Boiler lower °C,1,RW,60399,60400,60401,62508,5,"0,1",elhLowerSetp,,x,,,x,,
+61634,Boiler upper °C,1,RW,60402,60403,60404,62508,6,"0,1",elhUpperSetp,x,x,,,,,
+61635,Boiler add heat °C,1,RW,60405,60406,60407,62508,7,"0,1",elhAddHeatSetp,x,x,,,,,
+61636,Boiler DHW °C,1,RW,60408,60409,60410,62508,8,"0,1",elhDHWAddHeatSetp,x,x,,,,,
+61637,Diff thermostat start temp diff,1,RW,60411,60412,60413,62508,9,"0,1",dthDiffTempStart,x,x,x,x,,,
+61638,Diff thermostat stop temp diff,1,RW,60414,60415,60416,62508,10,"0,1",dthDiffTempStop,x,x,x,x,,,
+61639,Diff thermostat charge temperature,1,RW,60417,60418,60419,62508,11,"0,1",dthChargeTemp,x,x,x,x,,,
+61640,EcoLogic / EcoZenith i550: Solar,,,,,,,,,,,,,,,,
+,deltaT max Other: Solar start charge,1,RW,60420,60421,60422,62508,12,"0,1",sunDiffTempStart,x,x,x,x,x,x,x
+,difference,,,,,,,,,,,,,,,,
