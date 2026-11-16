@@ -97,10 +97,16 @@ class CtcConfigFlow(ConfigFlow, domain=DOMAIN):
                         CONF_SCAN_INTERVAL,
                         default=DEFAULT_SCAN_INTERVAL,
                     ): vol.All(int, vol.Range(min=MIN_SCAN_INTERVAL)),
+                    # Setup form
                     vol.Required(
                         CONF_MODEL,
                         default=DEFAULT_MODEL,
-                    ): _model_selector(DEFAULT_MODEL),
+                    ): _model_selector(),
+                    # Options form
+                    vol.Required(
+                        CONF_MODEL,
+                        default=selected_model,
+                    ): _model_selector(),
                 }
             ),
             errors=errors,
