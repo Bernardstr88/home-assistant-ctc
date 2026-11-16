@@ -136,7 +136,7 @@ class CtcOptionsFlow(OptionsFlow):
                     vol.Required(
                         CONF_MODEL,
                         default=selected_model,
-                    ): _model_selector(selected_model),
+                    ): _model_selector(),
                 }
             ),
         )
