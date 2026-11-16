@@ -14,6 +14,7 @@ YAML Modbus integration and does not require external Python packages.
 - Temperature, COP, status and DHW sensors
 - Number controls for DHW, heating curve and heater limits
 - SmartGrid mode select on register `1100`
+- User-selected CTC product family recorded in the Home Assistant device info
 
 ## Default Connection
 
@@ -24,8 +25,21 @@ YAML Modbus integration and does not require external Python packages.
 | Slave ID | `1` |
 | Scan interval | `30` seconds |
 
-The config flow only checks whether the TCP port is reachable. The first real
-Modbus register read happens when Home Assistant sets up the integration.
+During setup, select the product family from the model list in the CTC BMS code
+table. The table labels the GSi family as **GSi / CTC GS**, which is the choice
+for a GSi 612. Choose **Other / not listed** if you are unsure. The selection
+is saved on the integration and shown as the device model in Home Assistant;
+it can be changed later from the integration's options.
+
+The BMS documentation does not expose a reliable model-identification register,
+so the integration cannot automatically determine the model. The current
+register/entity definitions are still shared across selected families; the
+model selection records the user's identification and does not yet filter
+entities by model-specific register availability. Validate registers against
+your heat pump before relying on them, especially writable controls.
+
+The config flow checks whether the TCP port is reachable. The first real Modbus
+register read happens when Home Assistant sets up the integration.
 
 ## Register Notes
 
@@ -54,19 +68,4 @@ validated on a live installation.
 Add this repository as a custom repository:
 
 ```text
-https://github.com/Bernardstr88/home-assistant-ctc
-```
-
-Category:
-
-```text
-Integration
-```
-
-Then install **CTC Heat Pump**, restart Home Assistant, and add the integration
-from Settings > Devices & services.
-
-## Safety
-
-Writable registers can change heat pump behavior. Validate each control on your
-specific CTC model before using it in automations.
+https://github.com/William-Wolke/home-assistant-ctc

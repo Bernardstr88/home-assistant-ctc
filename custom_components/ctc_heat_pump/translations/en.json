@@ -3,18 +3,53 @@
     "step": {
       "user": {
         "title": "Connect to CTC Heat Pump",
-        "description": "Enter the Modbus TCP connection details for the CTC heat pump.",
+        "description": "Enter the Modbus TCP connection details and select the CTC product family. The model is not detected automatically.",
         "data": {
           "host": "Host",
           "port": "Port",
           "slave_id": "Slave ID",
-          "scan_interval": "Scan interval"
+          "scan_interval": "Scan interval",
+          "model": "CTC model / product family"
         },
         "data_description": {
           "host": "Hostname or IP address of the heat pump.",
           "port": "Modbus TCP port. The default is 502.",
           "slave_id": "Modbus slave ID. CTC defaults to 1.",
-          "scan_interval": "Polling interval in seconds."
+          "scan_interval": "Polling interval in seconds.",
+          "model": "Choose the family listed in the CTC BMS code table. GSi 612 is represented by the GSi / CTC GS family. Choose Other / not listed if unsure."
+        },
+        "options": {
+          "model": {
+            "ecoheat_400": "EcoHeat 400",
+            "ecozenith_i250": "EcoZenith i250",
+            "gsi_ctc_gs": "GSi / CTC GS",
+            "ecovent_i350f": "EcoVent i350F",
+            "ecozenith_i350": "EcoZenith i350",
+            "ecozenith_i550": "EcoZenith i550",
+            "ecologic": "EcoLogic",
+            "ecologic_s": "EcoLogic S",
+            "other": "Other / not listed"
+          }
+        }
+      },
+      "init": {
+        "title": "CTC model",
+        "description": "Change the product family selected for this heat pump.",
+        "data": {
+          "model": "CTC model / product family"
+        },
+        "options": {
+          "model": {
+            "ecoheat_400": "EcoHeat 400",
+            "ecozenith_i250": "EcoZenith i250",
+            "gsi_ctc_gs": "GSi / CTC GS",
+            "ecovent_i350f": "EcoVent i350F",
+            "ecozenith_i350": "EcoZenith i350",
+            "ecozenith_i550": "EcoZenith i550",
+            "ecologic": "EcoLogic",
+            "ecologic_s": "EcoLogic S",
+            "other": "Other / not listed"
+          }
         }
       }
     },

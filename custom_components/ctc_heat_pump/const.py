@@ -16,6 +16,21 @@ MIN_SCAN_INTERVAL = 5
 
 CONF_SLAVE_ID = "slave_id"
 CONF_SCAN_INTERVAL = "scan_interval"
+CONF_MODEL = "model"
+
+# Models listed in the bms manual
+MODEL_OPTIONS: dict[str, str] = {
+    "ecoheat_400": "EcoHeat 400",
+    "ecozenith_i250": "EcoZenith i250",
+    "gsi_ctc_gs": "GSi / CTC GS",
+    "ecovent_i350f": "EcoVent i350F",
+    "ecozenith_i350": "EcoZenith i350",
+    "ecozenith_i550": "EcoZenith i550",
+    "ecologic": "EcoLogic",
+    "ecologic_s": "EcoLogic S",
+    "other": "Other / not listed",
+}
+DEFAULT_MODEL = "other"
 
 DEFAULT_UPDATE_INTERVAL = timedelta(seconds=DEFAULT_SCAN_INTERVAL)
 

@@ -5,7 +5,14 @@ from __future__ import annotations
 from homeassistant.helpers.device_registry import DeviceInfo
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
-from .const import DEFAULT_NAME, DOMAIN, MANUFACTURER
+from .const import (
+    CONF_MODEL,
+    DEFAULT_MODEL,
+    DEFAULT_NAME,
+    DOMAIN,
+    MANUFACTURER,
+    MODEL_OPTIONS,
+)
 from .coordinator import CtcDataUpdateCoordinator
 
 
@@ -22,8 +29,14 @@ class CtcEntity(CoordinatorEntity[CtcDataUpdateCoordinator]):
     @property
     def device_info(self) -> DeviceInfo:
         """Return device info."""
+        entry = self.coordinator.config_entry
+        model = entry.options.get(
+            CONF_MODEL,
+            entry.data.get(CONF_MODEL, DEFAULT_MODEL),
+        )
         return DeviceInfo(
-            identifiers={(DOMAIN, self.coordinator.config_entry.entry_id)},
+            identifiers={(DOMAIN, entry.entry_id)},
             manufacturer=MANUFACTURER,
+            model=MODEL_OPTIONS.get(model, MODEL_OPTIONS[DEFAULT_MODEL]),
             name=DEFAULT_NAME,
         )
