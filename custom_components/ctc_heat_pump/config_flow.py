@@ -50,7 +50,7 @@ class CtcConfigFlow(ConfigFlow, domain=DOMAIN):
     @callback
     def async_get_options_flow(config_entry: ConfigEntry) -> OptionsFlow:
         """Return the options flow for an existing heat pump."""
-        return CtcOptionsFlow(config_entry)
+        return CtcOptionsFlow()
 
     async def async_step_user(
         self,
@@ -95,10 +95,6 @@ class CtcConfigFlow(ConfigFlow, domain=DOMAIN):
 class CtcOptionsFlow(OptionsFlow):
     """Allow the selected CTC product family to be changed later."""
 
-    def __init__(self, config_entry: ConfigEntry) -> None:
-        """Initialize the options flow."""
-        self.config_entry = config_entry
-
     async def async_step_init(
         self,
         user_input: dict[str, Any] | None = None,
@@ -121,4 +117,3 @@ class CtcOptionsFlow(OptionsFlow):
                 }
             ),
         )
-
