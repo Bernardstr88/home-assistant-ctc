@@ -18,7 +18,7 @@ CONF_SLAVE_ID = "slave_id"
 CONF_SCAN_INTERVAL = "scan_interval"
 CONF_MODEL = "model"
 
-# Models listed in the bms manual
+# Model identifiers used by the CTC BMS documentation and config flow.
 MODEL_OPTIONS: dict[str, str] = {
     "ecoheat_400": "EcoHeat 400",
     "ecozenith_i250": "EcoZenith i250",
@@ -38,3 +38,4 @@ MANUFACTURER = "CTC"
 
 MIN_RAW_INT16 = -32768
 MAX_RAW_INT16 = 32767
+

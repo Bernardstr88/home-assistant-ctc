@@ -9,6 +9,7 @@ from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
 from .coordinator import CtcDataUpdateCoordinator
 from .entity import CtcEntity
+from .model_support import compatible_registers
 from .registers import NUMBER_REGISTERS, NumberRegister
 
 
@@ -17,10 +18,14 @@ async def async_setup_entry(
     entry: ConfigEntry,
     async_add_entities: AddEntitiesCallback,
 ) -> None:
-    """Set up CTC numbers."""
+    """Set up only number controls supported by the selected model."""
     coordinator: CtcDataUpdateCoordinator = entry.runtime_data
     async_add_entities(
-        CtcNumber(coordinator, register) for register in NUMBER_REGISTERS
+        CtcNumber(coordinator, register)
+        for register in compatible_registers(
+            NUMBER_REGISTERS,
+            coordinator.model,
+        )
     )
 
 

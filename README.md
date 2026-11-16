@@ -25,47 +25,23 @@ YAML Modbus integration and does not require external Python packages.
 | Slave ID | `1` |
 | Scan interval | `30` seconds |
 
-During setup, select the product family from the model list in the CTC BMS code
-table. The table labels the GSi family as **GSi / CTC GS**, which is the choice
-for a GSi 612. Choose **Other / not listed** if you are unsure. The selection
-is saved on the integration and shown as the device model in Home Assistant;
-it can be changed later from the integration's options.
+Select **CTC GSi 612** (or the broader **GSi / CTC GS** family) during setup
+for a GSi 612. The selection is stored in the integration and shown in Home
+Assistant's device info; it can be changed later in the integration options.
 
-The BMS documentation does not expose a reliable model-identification register,
-so the integration cannot automatically determine the model. The current
-register/entity definitions are still shared across selected families; the
-model selection records the user's identification and does not yet filter
-entities by model-specific register availability. Validate registers against
-your heat pump before relying on them, especially writable controls.
+## Curated model-specific registers
 
-The config flow checks whether the TCP port is reachable. The first real Modbus
-register read happens when Home Assistant sets up the integration.
+The full CTC BMS guide contains far more codes than the integration should
+create as Home Assistant entities. `registers.py` remains the curated source of
+entity definitions: each sensor or control there is a deliberate choice of
+address, data type, scaling, units, and (for controls) write range. Do not
+turn the full extracted PDF table into entities automatically.
 
-## Register Notes
+`model_support.py` provides the compatibility allowlist. Add a register key to
+`REGISTER_COMPATIBILITY` only after confirming the code's model range in the
+manual or on a device. For example:
 
-The CTC BMS map uses holding registers with offset `0`.
-
-- Read: FC3
-- Write: FC6
-- Byte order: big-endian
-- Word order for `float32`: big-endian, AB CD
-
-SmartGrid register:
-
-| Value | Meaning |
-| ---: | --- |
-| `0` | Normal |
-| `64` | SmartGrid A / Blocking |
-| `128` | SmartGrid B / Forced |
-| `192` | SmartGrid A+B / Overcapacity |
-
-Some high register addresses are known to differ between CTC models. The
-float32 DHW sensors around `62361` and `65069` are disabled by default until
-validated on a live installation.
-
-## Installation With HACS
-
-Add this repository as a custom repository:
-
-```text
-https://github.com/William-Wolke/home-assistant-ctc
+```python
+REGISTER_COMPATIBILITY = {
+    "some_curated_sensor": frozenset({"gsi_ctc_gs"}),
+}

@@ -9,6 +9,7 @@ from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
 from .coordinator import CtcDataUpdateCoordinator
 from .entity import CtcEntity
+from .model_support import is_compatible
 from .registers import SMARTGRID_OPTIONS
 
 
@@ -17,9 +18,10 @@ async def async_setup_entry(
     entry: ConfigEntry,
     async_add_entities: AddEntitiesCallback,
 ) -> None:
-    """Set up CTC selects."""
+    """Set up CTC selects supported by the selected model."""
     coordinator: CtcDataUpdateCoordinator = entry.runtime_data
-    async_add_entities([CtcSmartGridSelect(coordinator)])
+    if is_compatible("smartgrid_mode", coordinator.model):
+        async_add_entities([CtcSmartGridSelect(coordinator)])
 
 
 class CtcSmartGridSelect(CtcEntity, SelectEntity):

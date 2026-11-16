@@ -9,6 +9,7 @@ from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
 from .coordinator import CtcDataUpdateCoordinator
 from .entity import CtcEntity
+from .model_support import compatible_registers
 from .registers import SENSOR_REGISTERS, SensorRegister
 
 
@@ -17,10 +18,14 @@ async def async_setup_entry(
     entry: ConfigEntry,
     async_add_entities: AddEntitiesCallback,
 ) -> None:
-    """Set up CTC sensors."""
+    """Set up only sensors supported by the selected model."""
     coordinator: CtcDataUpdateCoordinator = entry.runtime_data
     async_add_entities(
-        CtcSensor(coordinator, register) for register in SENSOR_REGISTERS
+        CtcSensor(coordinator, register)
+        for register in compatible_registers(
+            SENSOR_REGISTERS,
+            coordinator.model,
+        )
     )
 
 
