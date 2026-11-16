@@ -10,6 +10,7 @@ import voluptuous as vol
 from homeassistant.config_entries import ConfigEntry, ConfigFlow, OptionsFlow
 from homeassistant.const import CONF_HOST, CONF_PORT
 from homeassistant.core import HomeAssistant, callback
+from homeassistant.helpers import selector
 
 from .const import (
     CONF_MODEL,
@@ -25,6 +26,18 @@ from .const import (
 )
 
 
+def _model_selector() -> selector.SelectSelector:
+    """Create a model dropdown with user-friendly labels."""
+    return selector.SelectSelector(
+        selector.SelectSelectorConfig(
+            options=[
+                {"value": model_key, "label": model_name}
+                for model_key, model_name in MODEL_OPTIONS.items()
+            ],
+            mode=selector.SelectSelectorMode.DROPDOWN,
+        )
+    )
+
 async def _validate_input(hass: HomeAssistant, data: dict[str, Any]) -> str:
     """Validate the user input allows us to connect."""
     await hass.async_add_executor_job(
@@ -32,7 +45,8 @@ async def _validate_input(hass: HomeAssistant, data: dict[str, Any]) -> str:
         data[CONF_HOST],
         data[CONF_PORT],
     )
-    return f"{MODEL_OPTIONS[data[CONF_MODEL]]} ({data[CONF_HOST]})"
+    model_name = MODEL_OPTIONS[data[CONF_MODEL]]
+    return f"{model_name} ({data[CONF_HOST]})"
 
 
 def _test_tcp_connection(host: str, port: int) -> None:
@@ -83,9 +97,10 @@ class CtcConfigFlow(ConfigFlow, domain=DOMAIN):
                         CONF_SCAN_INTERVAL,
                         default=DEFAULT_SCAN_INTERVAL,
                     ): vol.All(int, vol.Range(min=MIN_SCAN_INTERVAL)),
-                    vol.Required(CONF_MODEL, default=DEFAULT_MODEL): vol.In(
-                        tuple(MODEL_OPTIONS)
-                    ),
+                    vol.Required(
+                        CONF_MODEL,
+                        default=DEFAULT_MODEL,
+                    ): _model_selector(DEFAULT_MODEL),
                 }
             ),
             errors=errors,
@@ -107,13 +122,15 @@ class CtcOptionsFlow(OptionsFlow):
             CONF_MODEL,
             self.config_entry.data.get(CONF_MODEL, DEFAULT_MODEL),
         )
+
         return self.async_show_form(
             step_id="init",
             data_schema=vol.Schema(
                 {
-                    vol.Required(CONF_MODEL, default=selected_model): vol.In(
-                        tuple(MODEL_OPTIONS)
-                    ),
+                    vol.Required(
+                        CONF_MODEL,
+                        default=selected_model,
+                    ): _model_selector(selected_model),
                 }
             ),
         )
