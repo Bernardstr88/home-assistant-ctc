@@ -19,7 +19,31 @@ from .const import CONF_MODEL, DEFAULT_MODEL
 # Register key -> model identifiers verified to implement that code.
 # Use a frozenset so the compatibility data is immutable at runtime. Add keys
 # only for curated integration registers; do not import the entire PDF table.
-REGISTER_COMPATIBILITY: dict[str, frozenset[str]] = {}
+REGISTER_COMPATIBILITY: dict[str, frozenset[str]] = {
+    "outdoor_temperature": frozenset({"gsi_ctc_gs"}),
+    "dhw_manual_stop_temperature": frozenset({"gsi_ctc_gs"}),
+    "dhw_setpoint": frozenset({"gsi_ctc_gs"}),
+    "hot_water_temperature": frozenset({"gsi_ctc_gs"}),
+    "dhw_upper_temperature": frozenset({"gsi_ctc_gs"}),
+    "dhw_capacity": frozenset({"gsi_ctc_gs"}),
+    "dhw_stop_temperature_control": frozenset({"gsi_ctc_gs"}),
+    "hc1_supply_temperature": frozenset({"gsi_ctc_gs"}),
+    "return_temperature": frozenset({"gsi_ctc_gs"}),
+    "brine_in_temperature": frozenset({"gsi_ctc_gs"}),
+    "brine_out_temperature": frozenset({"gsi_ctc_gs"}),
+    "hp1_power_consumption": frozenset({"gsi_ctc_gs"}),
+    "immersion_heater_power": frozenset({"gsi_ctc_gs"}),
+    "hc1_curve_point_1_outdoor": frozenset({"gsi_ctc_gs"}),
+    "hc1_curve_point_1_supply": frozenset({"gsi_ctc_gs"}),
+    "hc1_curve_point_2_outdoor": frozenset({"gsi_ctc_gs"}),
+    "hc1_curve_point_2_supply": frozenset({"gsi_ctc_gs"}),
+    "hc1_curve_point_3_outdoor": frozenset({"gsi_ctc_gs"}),
+    "hc1_curve_point_3_supply": frozenset({"gsi_ctc_gs"}),
+    "hc1_curve_point_4_outdoor": frozenset({"gsi_ctc_gs"}),
+    "hc1_curve_point_4_supply": frozenset({"gsi_ctc_gs"}),
+    "hc1_curve_point_5_outdoor": frozenset({"gsi_ctc_gs"}),
+    "hc1_curve_point_5_supply": frozenset({"gsi_ctc_gs"}),
+}
 
 
 def selected_model(entry: ConfigEntry) -> str:

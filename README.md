@@ -11,8 +11,9 @@ YAML Modbus integration and does not require external Python packages.
 - UI setup flow
 - Local Modbus TCP polling using FC3 read holding registers
 - FC6 single-register writes for writable CTC parameters
-- Temperature, COP, status and DHW sensors
-- Number controls for DHW, heating curve and heater limits
+- Temperature, COP, status, DHW, brine, return/supply and power sensors
+- GSi/CTC GS DHW controls and five-point HC1 heating-curve controls
+- Number controls for heating curve and heater limits
 - SmartGrid mode select on register `1100`
 - User-selected CTC product family recorded in the Home Assistant device info
 
